@@ -1,11 +1,42 @@
 const CONFIG = {
+    TYPE_OPTIONS    : {
+        kq    : {
+            type  : 'kst',
+            domain: 'https://vipk16-hztk11.kuaishang.cn/',
+            id    : 982318,
+            fi    : 118952,
+            cas   : 116432,
+        },
+        kq_xxl: {
+            type  : 'kst',
+            domain: 'https://vipk16-hztk11.kuaishang.cn/',
+            id    : 982318,
+            fi    : 127324,
+            cas   : 116432,
+        },
+        zx    : {
+            type  : 'kst',
+            domain: 'https://vipk16-hztk11.kuaishang.cn/',
+            id    : 553487,
+            fi    : 118951,
+            cas   : 116431,
+        },
+        cd_swt: {
+            type: 'swt',
+            js  : 'http://mqy.zoosnet.net/JS/LsJS.aspx?siteid=MQY16279901&lng=cn'
+        },
+        cq_swt: {
+            type: 'swt',
+            js  : 'http://nac.zoosnet.net/JS/LsJS.aspx?siteid=NAC28268335&lng=cn'
+        },
+    },
     BASE            : {
         // 接入类型, 在 TYPE_OPTIONS 中定义
-        TYPE            : 'cd_swt',
+        TYPE            : 'cq_swt',
         // 接入对话的标识
-        PAGE_TAG        : '###88888_00000',
-        // 默认页 :0-3
-        ROOT            : 1,
+        PAGE_TAG        : '###口腔综合',
+        // 默认页 
+        ROOT            : 3,
         // 页面标题
         WEB_TITLE       : '西安画美',
         // 头部LOGO
@@ -55,44 +86,13 @@ const CONFIG = {
                 name : 'price',
                 path : '/price'
             },
-
         ]
     },
     THEME           : {
         // 页面主题 : ['blue' , 'red']
-        COLOR      : 'red',
+        COLOR      : 'blue',
     },
-    TYPE_OPTIONS    : {
-        kq    : {
-            type  : 'kst',
-            domain: 'https://vipk16-hztk11.kuaishang.cn/',
-            id    : 982318,
-            fi    : 118952,
-            cas   : 116432,
-        },
-        kq_xxl: {
-            type  : 'kst',
-            domain: 'https://vipk16-hztk11.kuaishang.cn/',
-            id    : 982318,
-            fi    : 127324,
-            cas   : 116432,
-        },
-        zx    : {
-            type  : 'kst',
-            domain: 'https://vipk16-hztk11.kuaishang.cn/',
-            id    : 553487,
-            fi    : 118951,
-            cas   : 116431,
-        },
-        cd_swt: {
-            type: 'swt',
-            js  : 'http://mqy.zoosnet.net/JS/LsJS.aspx?siteid=MQY16279901&lng=cn'
-        },
-        cq_swt: {
-            type: 'swt',
-            js  : 'http://mqy.zoosnet.net/JS/LsJS.aspx?siteid=NAC28268335&lng=cn'
-        },
-    },
+
     // 消息配置
     MESSAGE         : {
         // 初始对话
@@ -173,8 +173,12 @@ const CONFIG = {
     HOME_PAGE       : {
         // 开启图片首页
         ENABLED       : true,
+
+        // BASE_URL + PATH + NAME + COUNT + EXT
+        // http://kst.img.xamryy.cn/baqi/zx-ty-image/bg_2.jpg
+
         // 图片域名
-        BASE_URL      : 'http://kst.img.xamryy.cn/',
+        BASE_URL      : 'http://kst.img.xamryy.cn',
         // 图片目录
         PATH          : '/baqi/zx-ty-image/',
         // 图片前缀
@@ -182,7 +186,7 @@ const CONFIG = {
         // 图片后缀
         EXT           : '.jpg',
         // 图片数量
-        COUNT         : 27,
+        COUNT         : 27, // 1 - count
         // 事件,目前支持  ['router:/chat']
         EVENTS        : {
             10: {
@@ -432,14 +436,12 @@ const CONFIG = {
         SELECT_START    : false,
         // 模式类型 : [ 'items' ]
         SELECT_TYPE     : 'items',
-        // 未发送过消息时,输入框默认内容.
-        FIRST_TEXT      : '',
         // 按钮 文字
         SEND_BUTTON_TEXT: '发送',
         // 开启超时自动问候
         AUTO_SAY        : true,
         // 问候秒数
-        AUTO_SAY_DELAY  : 10000,
+        AUTO_SAY_DELAY  : 5000,
         // 左侧 头像
         AVATAR          : 'http://xl.xahmyy.com/zt/xxl-hm-syp/images/avatar_mbp.png',
         // 将 关键词 输入到输入框
@@ -654,17 +656,17 @@ const CONFIG = {
                     diff : 'http://47.92.132.225:7026/zt/hm-zh/images/case_zh_055.png'
                 }
             },
-
-
         ]
     },
     SELECT_ITEMS    : {
+        // 第一个一定是运行 hello 
         hello: {
             type   : 'select-item-group',
             title  : '关键字',
             theme  : 'blue',
             next   : 'age',
             message: [
+
                 {
                     type      : 'advertising',
                     maxWidth  : true,
@@ -675,9 +677,16 @@ const CONFIG = {
                 },
                 {
                     type     : 'left',
-                    animation: 'left-default',
+                    animatleftion: 'left-default',
                     value    : '您好,请问有什么问题?',
                 },
+                {
+                    type     : 'left',
+                    animatleftion: 'left-default',
+                    value    : 'w xiang shang tian',
+                },
+                
+
             ],
             data   : {
                 items: [
@@ -686,6 +695,7 @@ const CONFIG = {
                         show     : true,
                         animation: 'right-select',
                         el       : null,
+                        next: 'age1'
                     },
                     {
                         value    : '领取优惠',
@@ -726,6 +736,30 @@ const CONFIG = {
                 ]
             },
         },
+        age1  : {
+            type   : 'select-item-group',
+            title  : '年龄',
+            theme  : 'blue',
+            message: [
+                {
+                    type     : 'left',
+                    animation: 'left-default',
+                    value    : '您好,请问有什么问题?',
+                },
+            ],
+            data   : {
+                items: [
+                    {
+                        value    : '领取优惠1',
+                        show     : true,
+                        animation: 'right-select',
+                        el       : null,
+                    },
+
+                ]
+            },
+        },
+        
 
     },
 };

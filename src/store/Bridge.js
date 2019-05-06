@@ -50,7 +50,6 @@ export default {
                     make: true,
                     text: value,
                     messageCallback(message) {
-
                         switch (CONFIG.TYPE_OPTION.type) {
                             case "kst":
                                 dispatch('filterMessage', { message });

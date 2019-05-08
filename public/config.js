@@ -36,17 +36,17 @@ const CONFIG = {
         // 接入对话的标识
         PAGE_TAG        : '###口腔综合',
         // 默认页 
-        ROOT            : 3,
+        ROOT            : 1,
         // 页面标题
-        WEB_TITLE       : '西安画美',
+        WEB_TITLE       : '重庆团圆口腔医院',
         // 头部LOGO
         HEADER_LOGO     : {
             // IMG 优先级大于 TEXT.
-            IMG: 'http://47.92.132.225:7026/zt/zx-comprehensive-center/img/logo.9952d203.png',
+            IMG: 'http://m.cqkyyy.com/zt/dym-test/img/logo.9952d203.png',
             TEXT: '',
         },
         // 电话,页面内一些电话功能的电话号码
-        TEL             : '029-88828888',
+        TEL             : '023-66338888',
         // 是否显示页面右上角电话图标
         SHOW_TEL        : true,
         // 显示底部聊天框的页面.
@@ -72,9 +72,9 @@ const CONFIG = {
                 path : '/home'
             },
             {
-                title: '臻美案例',
-                name : 'case',
-                path : '/case'
+                title: '项目报价',
+                name : 'price',
+                path : '/price'
             },
             {
                 title: '在线预约',
@@ -82,15 +82,15 @@ const CONFIG = {
                 path : '/chat'
             },
             {
-                title: '项目报价',
-                name : 'price',
-                path : '/price'
+                title: '联系我们',
+                name : 'concat',
+                path : '/concat'
             },
         ]
     },
     THEME           : {
-        // 页面主题 : ['blue' , 'red']
-        COLOR      : 'blue',
+        // 页面主题 : ['blue' , 'red','green']
+        COLOR      : 'green',
     },
 
     // 消息配置
@@ -102,44 +102,45 @@ const CONFIG = {
                 maxWidth  : true,
                 notPadding: true,
                 //border : true,
-                value     : 'http://m.xaylmr.vip/zt/hm-zh/images/b_zh_mbp.png',
+                value     : 'http://vip1ty.cqkyyy.com/zt/dym-test/img/b_zh_mbp.jpg',
             },
             {
                 type      : 'broadcast',
                 title     : '近期优惠',
                 scrollToMe: true,
                 data      : [
-                    '画美，用心服务每一位求美者',
-                    '精彩源于美丽，蝶变始于画美',
-                    '画美整形，真实案例展示，蜕变人生'
+                    '天使爱微笑，隐形矫正最高立减11000',
+                    '国际种牙节，种牙折上折，到院享豪礼',
+                    '黑科技3D矫正0元体验，遇见你的美'
                 ],
             },
+            //活动优惠轮播
+            // {
+            //     type: 'advertisings',
+            //     data: [
+            //         {
+            //             value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd1.jpg',
+            //             sendMessage: '双眼皮优惠',
+            //         },
+            //         {
+            //             value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd2.jpg',
+            //             sendMessage: '瘦脸针优惠',
+            //         },
+            //         {
+            //             value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd3.jpg',
+            //             sendMessage: '祛斑优惠',
+            //         },
+            //     ]
+            // },
             {
-                type: 'advertisings',
-                data: [
-                    {
-                        value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd1.jpg',
-                        sendMessage: '双眼皮优惠',
-                    },
-                    {
-                        value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd2.jpg',
-                        sendMessage: '瘦脸针优惠',
-                    },
-                    {
-                        value      : 'http://m.xaylmr.vip/zt/hm-zh/images/hd3.jpg',
-                        sendMessage: '祛斑优惠',
-                    },
-                ]
+                type     : 'left',
+                animation: 'left-default',
+                value    : '您好，在的！',
             },
             {
                 type     : 'left',
                 animation: 'left-default',
-                value    : '您好，在的!',
-            },
-            {
-                type     : 'left',
-                animation: 'left-default',
-                value    : '亲,您多大年龄？请描述一下您的具体情况，我给您做科学的分析和建议',
+                value    : '请说！您的牙齿目前是什么情况？',
                 duration : 888,
             },
         ],
@@ -147,7 +148,7 @@ const CONFIG = {
             {
                 type     : 'left',
                 animation: 'left-default',
-                value    : '本平台开通【自助查询价格系统】可直接输入姓名+手机+咨询项目，系统会以加密形式自动发送至您手机！',
+                value    : '您好，还在关注对话么？',
             },
         ],
         // 对话中提交报价回复
@@ -178,15 +179,15 @@ const CONFIG = {
         // http://kst.img.xamryy.cn/baqi/zx-ty-image/bg_2.jpg
 
         // 图片域名
-        BASE_URL      : 'http://kst.img.xamryy.cn',
+        BASE_URL      : 'http://vip1ty.cqkyyy.com',
         // 图片目录
-        PATH          : '/baqi/zx-ty-image/',
+        PATH          : '/zt/dym-test/img/',
         // 图片前缀
         NAME          : 'bg_',
         // 图片后缀
         EXT           : '.jpg',
         // 图片数量
-        COUNT         : 27, // 1 - count
+        COUNT         : 13, // 1 - count
         // 事件,目前支持  ['router:/chat']
         EVENTS        : {
             10: {
@@ -212,7 +213,7 @@ const CONFIG = {
         TEMPLATE_STYLE: '.test-something{font-size:30px;text-align:center;padding-top:50px;}',
     },
     PRICE_PAGE      : {
-        ASK_COVER: 'http://kst.img.xamryy.cn/theme/2-1-red.jpg',
+        ASK_COVER: 'http://vip1ty.cqkyyy.com/zt/dym-test/img/2-1-red.jpg',
         QUESTION : [
             {
                 title  : '您多大年龄了呢?',
@@ -224,57 +225,69 @@ const CONFIG = {
                 ],
                 value  : '',
             },
-            {
-                title  : '您的性别是?',
-                options: [
-                    '男',
-                    '女',
-                ],
-                value  : '',
-            },
+            // {
+            //     title  : '您的性别是?',
+            //     options: [
+            //         '男',
+            //         '女',
+            //     ],
+            //     value  : '',
+            // },
             {
                 value  : '',
                 title  : "您想咨询哪方面的问题呢?",
                 options: [
                     {
-                        value   : '眼部',
+                        value   : '牙齿缺失',
                         children: [
                             {
                                 value  : '',
-                                title  : '您想咨询眼部的什么问题呢?',
+                                title  : '您的牙齿缺失情况?',
                                 options: [
                                     {
-                                        value   : '双眼皮',
+                                        value   : '全口缺失',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您希望用哪种方式呢?',
+                                                title  : '您想通过哪种方式来补牙?',
                                                 options: [
-                                                    '埋线', '切开', '三点', '眼综合'
+                                                    '种植牙', '烤瓷牙', '全瓷牙', '假牙'
                                                 ]
                                             }
                                         ]
                                     },
                                     {
-                                        value   : '眼袋',
+                                        value   : '半口缺失',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您希望用哪种方式祛眼袋呢?',
+                                                title  : '您想通过哪种方式来补牙?',
                                                 options: [
-                                                    '内切', '外切'
+                                                    '种植牙', '烤瓷牙', '全瓷牙', '假牙'
                                                 ]
                                             }
                                         ]
                                     },
-                                    {
-                                        value   : '开眼角',
+                                     {
+                                        value   : '多颗缺失',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您想咨询哪种眼角方式呢?',
+                                                title  : '您想通过哪种方式来补牙?',
                                                 options: [
-                                                    '内眼角', '外眼角'
+                                                    '种植牙', '烤瓷牙', '全瓷牙', '假牙'
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                     {
+                                        value   : '单颗缺失',
+                                        children: [
+                                            {
+                                                value  : '',
+                                                title  : '您想通过哪种方式来补牙?',
+                                                options: [
+                                                    '种植牙', '烤瓷牙', '全瓷牙', '假牙'
                                                 ]
                                             }
                                         ]
@@ -284,44 +297,56 @@ const CONFIG = {
                         ]
                     },
                     {
-                        value   : '鼻部',
+                        value   : '牙齿矫正',
                         children: [
                             {
                                 value  : '',
-                                title  : '您想咨询有关鼻部的哪些问题呢?',
+                                title  : '您的牙齿属于下列哪种?',
                                 options: [
                                     {
-                                        value   : '隆鼻',
+                                        value   : '地包天',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您想咨询哪种隆鼻方式呢?',
+                                                title  : '选择您想矫正的方式?',
                                                 options: [
-                                                    '膨体', '硅胶', '自体脂肪', '玻尿酸'
+                                                    '金属矫正', '隐形矫正', '陶瓷矫正', '其他'
                                                 ]
                                             }
                                         ]
                                     },
                                     {
-                                        value   : '鼻修复',
+                                        value   : '龅牙',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您鼻部存在什么问题需要修复呢?',
+                                                title  : '选择您想矫正的方式?',
                                                 options: [
-                                                    '假体突出', '假体移位', '假体取出', '其他'
+                                                    '金属矫正', '隐形矫正', '陶瓷矫正', '其他'
                                                 ]
                                             }
                                         ]
                                     },
                                     {
-                                        value   : '鼻矫正',
+                                        value   : '牙齿不齐',
                                         children: [
                                             {
                                                 value  : '',
-                                                title  : '您目前鼻部有什么问题?',
+                                                title  : '选择您想矫正的方式?',
                                                 options: [
-                                                    '鹰钩鼻', '驼峰鼻', '宽鼻', '其他'
+                                                    '金属矫正', '隐形矫正', '陶瓷矫正', '其他'
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        value   : '其他',
+                                        children: [
+                                            {
+                                                value  : '',
+                                                title  : '选择您想矫正的方式?',
+                                                options: [
+                                                    '金属矫正', '隐形矫正', '陶瓷矫正', '其他'
                                                 ]
                                             }
                                         ]
@@ -331,47 +356,23 @@ const CONFIG = {
                         ]
                     },
                     {
-                        value   : '皮肤',
+                        value   : '牙齿修复',
                         children: [
                             {
                                 value  : '',
-                                title  : '您想咨询皮肤的哪些问题呢？',
+                                title  : '目前您的牙齿情况是？',
                                 options: [
                                     {
-                                        value   : '祛斑',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您想咨询皮肤的哪些问题呢？',
-                                                options: [
-                                                    '黄褐斑', '晒斑', '老年斑', '其他'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '断牙',
+                                        
                                     },
                                     {
-                                        value   : '祛痘',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您想通过什么方式祛痘？',
-                                                options: [
-                                                    '微针', '激光', '果酸焕肤', '其他'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '压裂',
+                                        
                                     },
                                     {
-                                        value   : '美白嫩肤',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您当前皮肤存在什么问题？',
-                                                options: [
-                                                    '毛孔粗大', '黑头多', '红血丝', '皱纹'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '烂牙',
+                                        
                                     },
                                     '其他'
                                 ]
@@ -379,47 +380,23 @@ const CONFIG = {
                         ]
                     },
                     {
-                        value   : '面部',
+                        value   : '牙齿美容',
                         children: [
                             {
                                 value  : '',
-                                title  : '您想咨询面部的哪些问题呢?',
+                                title  : '请选择您想了解的牙齿问题?',
                                 options: [
                                     {
-                                        value   : '丰额头',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您希望改善额头用哪种方式呢?',
-                                                options: [
-                                                    '假体', '玻尿酸', '自体脂肪', '其他'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '贴面',
+                                        
                                     },
                                     {
-                                        value   : '垫下巴',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您改善下巴希望用哪种方式呢?',
-                                                options: [
-                                                    '假体', '玻尿酸', '自体脂肪', '其他'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '牙冠',
+                                        
                                     },
                                     {
-                                        value   : '改变脸型',
-                                        children: [
-                                            {
-                                                value  : '',
-                                                title  : '您想通过哪种方式来改变脸型呢?',
-                                                options: [
-                                                    '注射瘦脸', '立体磨销', '面部吸脂', '其他'
-                                                ]
-                                            }
-                                        ]
+                                        value   : '美白',
+                                        
                                     },
                                     '其他'
                                 ]
@@ -443,7 +420,7 @@ const CONFIG = {
         // 问候秒数
         AUTO_SAY_DELAY  : 5000,
         // 左侧 头像
-        AVATAR          : 'http://xl.xahmyy.com/zt/xxl-hm-syp/images/avatar_mbp.png',
+        AVATAR          : 'http://vip1ty.cqkyyy.com/zt/dym-test/img/avatar_mbp.png',
         // 将 关键词 输入到输入框
         KEYWORD_TO_INPUT: false,
         // 未输入时显示的文字.
